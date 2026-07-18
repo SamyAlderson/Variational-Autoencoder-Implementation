@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Configurations du Variational Autoencoder",
+  "description": "Fichier de configuration du modèle",
+  "type": "object",
+  "properties": {
+    "model": {
+      "$ref": "#/definitions/model"
+    },
+    "training": {
+      "$ref": "#/definitions/training"
+    },
+    "evaluation": {
+      "$ref": "#/definitions/evaluation"
+    },
+    "output": {
+      "$ref": "#/definitions/output"
+    },
+    "logging": {
+      "$ref": "#/definitions/logging"
+    }
+  },
+  "required": [
+    "model",
+    "training",
+    "evaluation",
+    "output",
+    "logging"
+  ],
+  "definitions": {
+    "model": {
+      "type": "object",
+      "properties": {
+        "encoder_hidden_size": {
+          "type": "integer",
+          "description": "Taille de la couche cachée de l'encodeur"
+        },
+        "decoder_hidden_size": {
+          "type": "integer",
+          "description": "Taille de la couche cachée du décodeur"
+        },
+        "latent_dim": {
+          "type": "integer",
+          "description": "Dimension latente"
+        },
+        "batch_size": {
+          "type": "integer",
+          "description": "Taille de la batch"
+        },
+        "learning_rate": {
+          "type": "number",
+          "description": "Taux d'apprentissage"
+        }
+      },
+      "required": [
+        "encoder_hidden_size",
+        "decoder_hidden_size",
+        "latent_dim",
+        "batch_size",
+        "learning_rate"
+      ]
+    },
+    "training": {
+      "type": "object",
+      "properties": {
+        "epochs": {
+          "type": "integer",
+          "description": "Nombre d'epochs"
+        },
+        "patience": {
+          "type": "integer",
+          "description": "Nombre de patience"
+        },
+        "early_stopping": {
+          "type": "boolean",
+          "description": "Définition de l'arrêt précoce"
+        }
+      },
+      "required": [
+        "epochs",
+        "patience",
+        "early_stopping"
+      ]
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "validation_split": {
+          "type": "number",
+          "description": "Fraction de données de validation"
+        },
+        "test_split": {
+          "type": "number",
+          "description": "Fraction de données de test"
+        }
+      },
+      "required": [
+        "validation_split",
+        "test_split"
+      ]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "output_path": {
+          "type": "string",
+          "description": "Chemin d'accès au répertoire d'output"
+        }
+      },
+      "required": [
+        "output_path"
+      ]
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "log_level": {
+          "type": "string",
+          "description": "Niveau de log"
+        },
+        "log_file": {
+          "type": "string",
+          "description": "Chemin d'accès au fichier de log"
+        }
+      },
+      "required": [
+        "log_level",
+        "log_file"
+      ]
+    }
+  }
+}
