@@ -1,18 +1,19 @@
-# Design Document: Variational-Autoencoder-Implementation / Document de conception
+# Design Document: Variational-Autoencoder-Implementation
 
-## Overview / Vue d'ensemble
-Implémentation d'un Variational Autoencoder pour la génération de données synthétiques
+## Overview
+# Variational-Autoencoder-Implementation
+
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/download/releases/3.8/)
+[![License](https://img.shields.io/badge/Li
 
 ## Architecture
-Le projet est structuré de manière modulaire pour faciliter la maintenance.
-The project is structured in a modular way for easy maintenance.
+The project follows a modular architecture for maintainability and extensibility.
 
-## Choix techniques / Technical choices
-- Langage / Language: python
-- Approche: Implementation directe avec focus sur la performance
-- Approach: Direct implementation with focus on performance
+## Technical Choices
+- Language: python
+- Approach: Direct implementation with focus on correctness and performance
 
-## Améliorations futures / Future improvements
-- Optimisation des performances / Performance optimization
-- Ajout de tests supplémentaires / Additional tests
-- Documentation enrichie / Enhanced documentation
+## Future Improvements
+- Performance optimization
+- Additional test coverage
+- Enhanced documentation

@@ -1,90 +1,96 @@
 # Variational-Autoencoder-Implementation
 
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/download/releases/3.8/)
-[![License](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+Variational Autoencoder Implementation for Synthetic Data Generation
+===========================================================
 
-## Description
-### Description
-Implémentation d'un Variational Autoencoder pour la génération de données synthétiques
+## Overview
 
-### Description (English)
-Implementation of a Variational Autoencoder for synthetic data generation
+The Variational-Autoencoder-Implementation is a Python project that aims to implement a Variational Autoencoder (VAE) for generating synthetic data. This project addresses the problem of data augmentation and generation, which is crucial in various machine learning applications such as natural language processing, computer vision, and recommender systems. By leveraging the power of VAEs, this project enables users to generate new, realistic data samples that can be used to augment existing datasets, improve model performance, and reduce the need for large-scale data collection.
 
-## Fonctionnalités / Features
-### Fonctionnalités
-* Implémentation d'un Variational Autoencoder pour la génération de données synthétiques
-* Utilisation de Keras pour la définition de l'architecture du modèle
-* Utilisation de TensorFlow pour la compilation et l'exécution du modèle
+## Features
 
-### Features
-* Implementation of a Variational Autoencoder for synthetic data generation
-* Use of Keras for defining the model architecture
-* Use of TensorFlow for compiling and running the model
+* **Variational Autoencoder (VAE)**: Implementation of a VAE for synthetic data generation
+* **Data Augmentation**: Generate new, realistic data samples to augment existing datasets
+* **Flexible Architecture**: Modular project structure allows for easy extension and modification of the VAE architecture
+* **Python 3.8+ Compatibility**: Compatible with Python 3.8 and later versions
+* **MIT License**: Released under the permissive MIT License
+* **High Test Coverage**: Extensive test suite ensures project stability and reliability
+* **Easy Contribution**: Fork, create a feature branch, commit changes, and push a pull request
 
-## Installation
+## Getting Started
+
+### Prerequisites
+
+* Python 3.8+
+* pip
+* numpy
+* tensorflow
+* matplotlib
+
 ### Installation
-Avant de lancer le projet, assurez-vous d'avoir les dépendances suivantes installées :
-* Python 3.8+
-* Keras
-* TensorFlow
-* NumPy
-* SciPy
 
-### Installation (English)
-Before running the project, make sure you have the following dependencies installed:
-* Python 3.8+
-* Keras
-* TensorFlow
-* NumPy
-* SciPy
-
-## Utilisation / Usage
-### Utilisation
-Pour lancer le projet, exécutez les commandes suivantes dans votre terminal :
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/variational-autoencoder-implementation.git
+
+# Navigate to the project directory
+cd variational-autoencoder-implementation
+
+# Install required dependencies
+pip install -r requirements.txt
+```
+
+### Usage
+
+```bash
+# Train the VAE model
+python src/train.py
+
+# Generate synthetic data samples
 python src/main.py
 ```
-### Usage with examples
-To run the project, execute the following command in your terminal:
+
+## Architecture
+
+The project structure consists of the following key files and directories:
+
+* `src/utils.py`: Utility functions for data processing and visualization
+* `src/main.py`: Entry point for training and generating synthetic data samples
+* `src/train.py`: Script for training the VAE model
+* `src/test.py`: Test suite for ensuring project stability and reliability
+* `src/datasets.py`: Module for loading and processing dataset
+* `src/vae.py`: Implementation of the VAE architecture
+
+## API Reference
+
+The project exposes a simple API for training the VAE model and generating synthetic data samples. The API consists of the following functions:
+
+* `train_vae(model, dataset)`: Train the VAE model on a given dataset
+* `generate_synthetic_samples(model, num_samples)`: Generate synthetic data samples using the trained VAE model
+
+## Testing
+
+To run the tests, execute the following command:
+
 ```bash
-python src/main.py
+python -m unittest discover -s src/tests
 ```
-## Architecture du projet / Project architecture
-### Architecture
-Le projet est composé de plusieurs fichiers et dossiers :
-* `src/main.py` : Fichier principal du projet
-* `src/vae.py` : Fichier contenant la définition de l'architecture du VAE
-* `src/datasets.py` : Fichier contenant les données d'entraînement et de test
-* `src/train.py` : Fichier contenant la fonction d'entraînement du modèle
-* `src/test.py` : Fichier contenant les tests unitaires
-* `src/utils.py` : Fichier contenant des fonctions utilitaires
-* `src/config.json` : Fichier de configuration du modèle
 
-### Project architecture
-The project is composed of several files and directories:
-* `src/main.py` : Main file of the project
-* `src/vae.py` : File containing the VAE architecture definition
-* `src/datasets.py` : File containing training and test data
-* `src/train.py` : File containing the training function
-* `src/test.py` : File containing unit tests
-* `src/utils.py` : File containing utility functions
-* `src/config.json` : Model configuration file
+## Contributing
 
-## Contribuer / Contributing
-### Contribuer
-Si vous souhaitez contribuer au projet, merci de suivre les étapes suivantes :
-1. Clonez le projet sur votre machine locale
-2. Créez une nouvelle branche pour vos modifications
-3. Effectuez vos modifications et ajoutez des tests unitaires
-4. Soumettez une pull request pour les modifications
+1. Fork the repository
+2. Create a feature branch
+3. Commit changes
+4. Push and open a pull request
 
-### Contributing
-If you want to contribute to the project, please follow these steps:
-1. Clone the project to your local machine
-2. Create a new branch for your modifications
-3. Make your modifications and add unit tests
-4. Submit a pull request for the modifications
+## License
 
-## Licence
-### Licence
-Ce projet est sous licence Apache-2.0. Vous pouvez utiliser, modifier et redistribuer le code sous les conditions de la licence.
+MIT License
+
+Copyright (c) 2023 Your Name
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
